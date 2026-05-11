@@ -1,0 +1,19 @@
+theia@theiaopenshift-nakibfayaj99:/home/project/devops-capstone-project$ DATABASE_URI=sqlite:///test.db pytest
+=========================================== test session starts ===========================================
+platform linux -- Python 3.11.14, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/project/devops-capstone-project
+plugins: langsmith-0.3.45, cov-7.1.0, Faker-40.15.0, anyio-4.11.0
+collected 17 items                                                                                        
+
+tests/test_cli_commands.py .                                                                        [  5%]
+tests/test_models.py ...........                                                                    [ 70%]
+tests/test_routes.py .....                                                                          [100%]
+
+============================================ warnings summary =============================================
+tests/test_models.py::TestAccount::test_read_account
+  /home/project/devops-capstone-project/service/models.py:76: LegacyAPIWarning: Deprecated API features detected! These feature(s) are not compatible with SQLAlchemy 2.0. To prevent incompatible upgrades prior to updating applications, ensure requirements files are pinned to "sqlalchemy<2.0". Set environment variable SQLALCHEMY_WARN_20=1 to show all deprecation warnings.  Set environment variable SQLALCHEMY_SILENCE_UBER_WARNING=1 to silence this message. (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return cls.query.get(by_id)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================================== 17 passed, 1 warning in 0.52s ======================================
+theia@theiaopenshift-nakibfayaj99:/home/project/devops-capstone-project$ 
