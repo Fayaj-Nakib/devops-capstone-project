@@ -24,7 +24,13 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      # --- ADD THE LINT STEP HERE ---
+      - name: Lint with flake8
+        run: flake8 service --count --max-complexity=10 --max-line-length=127 --statistics
+      # ------------------------------
       - name: Run unit tests
         env:
           DATABASE_URI: postgresql://postgres:postgres@localhost:5432/postgres
