@@ -1,4 +1,10 @@
-# DevOps Capstone Template
+# DevOps Capstone Project
+
+## Project Description
+This project is a microservice for managing user accounts, built with Flask and deployed using modern DevOps practices including CI/CD pipelines, Docker, and Kubernetes.
+
+## Build Status
+![Build Status](https://github.com/Fayaj-Nakib/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
