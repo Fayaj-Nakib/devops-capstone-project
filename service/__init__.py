@@ -7,11 +7,15 @@ and SQL database
 import sys
 from flask import Flask
 from service import config
+from flask_talisman import Talisman # Import Talisman
 from service.common import log_handlers
 
 # Create Flask application
 app = Flask(__name__)
 app.config.from_object(config)
+
+# Initialize Talisman with a lenient Content Security Policy (CSP) for the lab
+talisman = Talisman(app)
 
 # Import the routes After the Flask app is created
 # pylint: disable=wrong-import-position, cyclic-import, wrong-import-order
